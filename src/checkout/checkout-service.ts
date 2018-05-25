@@ -186,6 +186,7 @@ export default class CheckoutService {
     }
 
     signOutCustomer(options?: CustomerRequestOptions): Promise<CheckoutSelectors> {
+        console.log("checkout service magic");
         const action = this._customerStrategyActionCreator.signOut(options);
 
         return this._store.dispatch(action, { queueId: 'customerStrategy' })

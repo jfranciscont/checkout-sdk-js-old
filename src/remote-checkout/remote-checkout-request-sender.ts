@@ -29,6 +29,7 @@ export default class RemoteCheckoutRequestSender {
     }
 
     signOut(methodName: string, { timeout }: RequestOptions = {}): Promise<Response> {
+        console.log("request sender magic");
         const url = `/remote-checkout/${methodName}/signout`;
 
         return this._requestSender.get(url, { timeout });
